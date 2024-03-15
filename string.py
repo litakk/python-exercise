@@ -1,34 +1,36 @@
 # 1. Write a function to swap the first and last characters in a string.
 # RU: Напишите функцию, чтобы поменять местами первый и последний символы в строке.
-# def swap_first_last(string):   # поменять_первый_последный
-#     return string[-1] + string[1:-1] + string[0]
-# x = swap_first_last("Feruz")
-# print(x)
+def swap_first_last(string):   # поменять_первый_последный
+    return string[-1] + string[1:-1] + string[0]
+ц = swap_first_last("Feruz")
+print(ц)
 
 
 # 2. Write a function to reverse a string.
 # RU: Напишите функцию, чтобы перевернуть строку.
 # allow => wolla
-# def reverse_string(string):  # перевернуть_строку
-#     return string[::-1]
-# x = reverse_string("feruz").capitalize()
-# print(x)
+def reverse_string(string):  # перевернуть_строку
+     return string[::-1]
+й = reverse_string("feruz").capitalize()
+print(й)
 
 
 # 3. Write a function to remove the nth index character from a n onempty string.
 # RU: Напишите функцию, чтобы удалить символ с индексом n из непустой строки.
-def remove_nth_index(string, index):  # удалить_с_индексом
-    # if len(string)<index  or  index<0:
-    #     print("Incorrect logic")
-    #     return
-    return string[:index] + string[index+1:]
-
+# def remove_nth_index(string, index):  # удалить_с_индексом
+#     if len(string)<index or index<0:
+#         print("Incorrect logic")
+#         return
+#     return string[:index] + string[index+1:]
+# у = remove_nth_index("Welcome", 2)
+# print(у)
 
 # 4. Write a function to remove the characters which have odd index values of a given string.
 # RU: Напишите функцию, чтобы удалить символы, которые имеют нечетные индексы заданной строки.
 def remove_odd_index(string):  # удалить_нечетные_индексы
     return string[::2]
-
+к = remove_odd_index("число")
+print(к)
 
 # 5. Write a Python script that takes input from the user and displays
 # that input back in upper and lower cases.
