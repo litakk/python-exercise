@@ -100,25 +100,20 @@ def change_first_char(symbol: str = "$") -> str:
     string = input("Напишите любое слово: ")
     first = string[0]
     return first + string[1:].replace(first.lower(), symbol)
-
+# p = change_first_char()
+# print(p)
 
 
 # 11. Write a Python program to get a single string from two given strings, separated by a space and
 # swap the first two characters of each string.
 # RU: Напишите программу на Python, чтобы получить одну строку из двух заданных строк, разделенных пробелом и
 # поменять местами первые два символа каждой строки.
-
-
-"Wello  Helcome"
+# "Wello  Helcome"
 # ---------------
-string1 = "Hello"
-string2 = "Welcome"
-x = string2[:2]+string1[2:] + " " + string1[:2]+string2[2:]
-# print(x)
-
-
-def swap_first_two(string1, string2):  # поменять_первые_два
-    return string2[:2] + string1[2:] + ' ' + string1[:2] + string2[2:]
+def swap_first_two(str1,str2):
+   return str2[:2]+str1[2:] + " " + str1[:2]+str2[2:]
+a = swap_first_two("Hello","City")
+print(a)
 
 
 # 12. Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string
@@ -126,14 +121,21 @@ def swap_first_two(string1, string2):  # поменять_первые_два
 # RU: Напишите программу на Python, чтобы добавить 'ing' в конец заданной строки (длина должна быть не менее 3).
 # Если заданная строка уже заканчивается на 'ing', вместо этого добавьте 'ly'.
 # Если длина строки заданной строки меньше 3, оставьте ее без изменений.
-def add_ing(string):  # добавить_ing
-    if len(string) < 3:
+# def add_ing(string):  # добавить_ing
+#     if len(string) < 3:
+#         return string
+#     if string[-3:] == 'ing':
+#         return string + 'ly'
+#     return string + 'ing'
+
+def add_ing(string):
+    if len(string) <3:
         return string
-    if string[-3:] == 'ing':
-        return string + 'ly'
-    return string + 'ing'
-
-
+    if string[-3:] == "ing":
+        return string + "ly"
+    return string + "ing"
+s = add_ing("substring")
+print(s)
 # 13. Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string.
 # If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
 # RU: Напишите программу на Python, чтобы найти первое появление подстрок «не» и «плохо» в заданной строке.
