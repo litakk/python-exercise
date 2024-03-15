@@ -1,5 +1,8 @@
 # ОБЪЯСНЕНИЕ : 
+# input - диалоговое окно - JS prompt()
+# slice - 
 
+# -----------------------------------
 # name = input("What is your name? ")
 
 
@@ -173,3 +176,21 @@
 
 # x.startswith("World")  # False
 # x.endswith("World")    # True
+
+# =================================================================
+
+
+# Напишите функцию, чтобы удалить символ с 
+# индексом n из непустой строки.
+
+# def remove_nth_index(string, index):
+#     """ Удаляет букву из строки по индексу """
+#     return string[:index] + string[index+1:]
+
+
+# def del_first_middle_last(str):
+#     MIDDLE = len(str) // 2
+#     return str[1:MIDDLE] + str[MIDDLE+1:-1]
+
+
+# print(del_first_middle_last("Hello world"))
