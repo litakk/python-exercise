@@ -2,8 +2,8 @@
 # RU: Напишите функцию, чтобы поменять местами первый и последний символы в строке.
 def swap_first_last(string):   # поменять_первый_последный
     return string[-1] + string[1:-1] + string[0]
-ц = swap_first_last("Feruz")
-print(ц)
+q = swap_first_last("Feruz")
+print(q)
 
 
 # 2. Write a function to reverse a string.
@@ -11,26 +11,28 @@ print(ц)
 # allow => wolla
 def reverse_string(string):  # перевернуть_строку
      return string[::-1]
-й = reverse_string("feruz").capitalize()
-print(й)
+w = reverse_string("feruz").capitalize()
+print(w)
 
 
-# 3. Write a function to remove the nth index character from a n onempty string.
-# RU: Напишите функцию, чтобы удалить символ с индексом n из непустой строки.
-# def remove_nth_index(string, index):  # удалить_с_индексом
-#     if len(string)<index or index<0:
-#         print("Incorrect logic")
-#         return
-#     return string[:index] + string[index+1:]
-# у = remove_nth_index("Welcome", 2)
-# print(у)
+# # 3. Write a function to remove the nth index character from a n onempty string.
+# # RU: Напишите функцию, чтобы удалить символ с индексом n из непустой строки.
+def remove_nth_index(string, index):  # удалить_с_индексом
+    if len(string)<index or index<0:
+        print("Incorrect logic")
+        return
+    return string[:index] + string[index+1:]
+e = remove_nth_index("Welcome", 2)
+print(e)
+
 
 # 4. Write a function to remove the characters which have odd index values of a given string.
 # RU: Напишите функцию, чтобы удалить символы, которые имеют нечетные индексы заданной строки.
 def remove_odd_index(string):  # удалить_нечетные_индексы
     return string[::2]
-к = remove_odd_index("число")
-print(к)
+r = remove_odd_index("число")
+print(r)
+
 
 # 5. Write a Python script that takes input from the user and displays
 # that input back in upper and lower cases.
@@ -38,30 +40,36 @@ print(к)
 # отображает этот ввод в верхнем и нижнем регистрах.
 def upper_lower(string):  # верхний_нижний
     return string.upper(), string.lower()
+t = upper_lower("значение")
+print(t)
 
 
-# 6. Write a function to find the second most frequent character in a given string.
-# RU: Напишите функцию, чтобы найти второй наиболее часто встречающийся символ в данной строке.
-# второй_наиболее_часто_встречающийся
-def second_most_frequent(string):
-    dict = {}
-    for i in string:
-        dict[i] = string.count(i)
-    return sorted(dict.items(), key=lambda x: x[1])[-2][0]
+# # 6. Write a function to find the second most frequent character in a given string.
+# # RU: Напишите функцию, чтобы найти второй наиболее часто встречающийся символ в данной строке.
+# # второй_наиболее_часто_встречающийся
+# def second_most_frequent(string):
+#     dict = {}
+#     for i in string:
+#         dict[i] = string.count(i)
+#     return sorted(dict.items(), key=lambda x: x[1])[-2][0]
+# y = second_most_frequent("словарь")
+# print(y)
 
 
 # 7. Write a function to convert a given string into a list of integers.
 # RU: Напишите функцию, чтобы преобразовать заданную строку в список целых чисел.
 def convert_to_list(string):  # преобразовать_в_список
     return [int(i) for i in string]
+u = convert_to_list("12345")
+print(u)
 
 
 # 8. Write a function to check if a given string is a palindrome.
 # RU: Напишите функцию, чтобы проверить, является ли заданная строка палиндромом.
 def is_palindrome(string):  # является_палиндромом
     return string == string[::-1]
-
-
+i = is_palindrome("madam")
+print(i)
 # 12321  => polindrome
 # 12345  => NOT polindrome
 # madam  => polindrome
@@ -74,8 +82,10 @@ def is_palindrome(string):  # является_палиндромом
 # Если длина строки меньше 2, вместо этого верните пустую строку.
 def first_last_two(string):  # первые_2_последние_2
     if len(string) < 2:
-        return ''
+        return ""
     return string[:2] + string[-2:]
+o = first_last_two("Паралелепипед")
+print(o)
 
 
 # 10. Write a Python program to get a string from a given string where all occurrences of its first char
@@ -90,6 +100,8 @@ def change_first_char(symbol: str = "$") -> str:
     string = input("Напишите любое слово: ")
     first = string[0]
     return first + string[1:].replace(first.lower(), symbol)
+
+
 
 # 11. Write a Python program to get a single string from two given strings, separated by a space and
 # swap the first two characters of each string.
