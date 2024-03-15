@@ -127,7 +127,6 @@ print(a)
 #     if string[-3:] == 'ing':
 #         return string + 'ly'
 #     return string + 'ing'
-
 def add_ing(string):
     if len(string) <3:
         return string
@@ -136,6 +135,8 @@ def add_ing(string):
     return string + "ing"
 s = add_ing("substring")
 print(s)
+
+
 # 13. Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string.
 # If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
 # RU: Напишите программу на Python, чтобы найти первое появление подстрок «не» и «плохо» в заданной строке.
@@ -147,26 +148,33 @@ def replace_not_poor(string):  # заменить_не_плохо
         return string.replace(string[not_index:poor_index+4], 'good')
     else:
         return string
+d = replace_not_poor("This is not poor")
+print(d)
 
 
 # 14. Write a Python function to create an HTML string with tags around the word(s)
 # RU: Напишите функцию Python для создания HTML-строки с тегами вокруг слова (слов).
 def add_tags(tag, string):  # добавить_теги
     return f'<{tag}>{string}</{tag}>'
+result = add_tags('b', 'This is text')  # Пример: тег 'b' для жирного текста
+print(result)
+
 
 # 15. Write a Python function to insert a string in the middle of a string.
 # RU: Напишите функцию Python для вставки строки посередине строки.
 # вставить_строку_посередине
-
-
 def insert_string_middle(string, string_to_insert):
     return string[:len(string)//2] + string_to_insert + string[len(string)//2:]
+g = insert_string_middle("midles","x")
+print(g)
 
 
 # 16. Write a Python function to get a string made of 4 copies of the last two characters of a specified string
 # RU: Напишите функцию Python, чтобы получить строку, состоящую из 4 копий последних двух символов заданной строки
 def last_two(string):  # последние_два
     return string[-2:] * 4
+h = last_two("last")
+print(h)
 
 
 # 17. Write a Python function to get a string made of the first three characters of a specified string.
@@ -177,6 +185,8 @@ def first_three(string):  # первые_три
     if len(string) < 3:
         return string
     return string[:3]
+j = first_three("first")
+print(j)
 
 
 # 18. Write a Python function to get the first half of a specified string of even length.
@@ -185,6 +195,7 @@ def first_half_even(string):  # первая_половина_четная
     if len(string) % 2 == 0:
         return string[:len(string)//2]
     return string
+
 
 # 19. Write a Python program to concatenate two strings and return the result.
 # If the length of the strings are not same then remove the characters from the longer string.
