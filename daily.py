@@ -1,10 +1,113 @@
 # ОБЪЯСНЕНИЕ : 
 # input - диалоговое окно - JS prompt()
+
 # slice - вырезка [начало:конец:шаг]
+
 # includes - ... in ... есть ли это в этом..
+
 # replace - замена указанных значений
-# MODIFYING STRINGS
-# ОБРАБОТКА СТРОК
+
+# -
+# MODIFYING STRINGS - ОБРАБОТКА СТРОК
+# upper()           => HELLO HELLO - Все большие
+# capitalize()      => Hello hello - Только первый
+# title()           => Hello Hello - Каждый первый большой
+# swapcase()
+# -
+
+# Check - Проверка на соответствие
+# x = "Hello World"
+# x.istitle()       # => True    является ли строка заголовком
+# x.isupper()       # => False   является ли строка в верхнем регистре
+# x.islower()       # => False   является ли строка в нижнем регистре
+# x.isalpha()       # => False   является ли строка буквенной
+# x.isalnum()       # => False   является ли строка буквенно-цифровой
+# x.isdecimal()       # False    является ли строка десятичной
+# x.isdigit()         # False    является ли строка цифровой
+# x.isnumeric()       # False    является ли строка числовой
+# x.isprintable()     # True     можно ли напечатать строку
+# x.isspace()         # False    является ли строка пробелом
+# x.isascii()         # True     является ли строка ASCII
+# - 
+
+# find index - Найти индекс
+# x = "Hello World"
+# x.index("o")    # 4
+# x.rindex("o")   # 7
+
+# - 
+# Аlignment - Выравнивание
+# x = "Hello World"
+# x.ljust(20, "*")    # 'Hello World********'
+# x.rjust(20, "*")    # '********Hello World'
+# x.center(20, "*")   # '***Hello World****'
+
+# - 
+
+# split - Разделение строки  // Разбиение строки
+# split(" ") - каждый текст
+# list(x) - каждую букву
+# rsplit(" ", 2) - разбивает на 2 части
+
+# x = "This is test text \nfor hello world"
+# x.split(" ")     # ['This', 'is', 'test', 'text', 'for', 'hello', 'world']
+# x.rsplit(" ", 2) # ['This is test text for', 'hello', 'world']
+# list(x)          # ['T', 'h', 'i', 's', ' ', 'i', 's', ' ', ... ... ...]
+# x.splitlines()   # ['This is test text ', ' for hello world']
+
+# -
+# join - Объединение строк
+# fruits = ["apple", "banana", "cherry"]
+# x = " ".join(fruits)  # apple banana cherry
+# print(x)
+
+# -
+# strip - Удаление пробелов
+# x = "   Hello    World   ".strip()
+
+# -
+# zfill - Добавление нулей
+# x = "Hello"
+# x.zfill(10)  # 00000Hello
+
+# -
+# count - Подсчет // Считать
+# x = "Hello World"
+# x.count("o")  # 2
+
+# -
+# expandtabs - Расширение вкладок
+# "\t"  === tab - СТАВИТ ПРОБЕЛ
+# "\n"  === new line - НОВАЯ СТРОКА ВНИЗ
+# x = "H\tel\tlo"
+# x.expandtabs(4)  # 'H    el    lo' - СТАВИТ ПРОБЕЛ
+
+# -
+# format - Форматирование - БЭК-ЕНД НЕ ПОНИМАЕТ PYTHON В ПРЯМОМ ВИДЕ, ДЛЯ ЭТОГО НУЖЕН .format(test=x)
+# x = "Updated"
+# f"This is {x} text" 
+# "This is {test} text".format(test=x)  
+
+# -
+# startswith, endswith, in - Начинается ли с .., заканчивается ли на ...,  включает ли внутри ...
+# x = "Hello World"
+# x.startswith("Hello")  # True
+# x.endswith("Hello")    # False
+# "Hello" in x           # True 
+
+
+
+# =========================================================
+# =========================================================
+# =========================================================
+# =========================================================
+# =========================================================
+# =========================================================
+# =========================================================
+# =========================================================
+# =========================================================
+# =========================================================
+# =========================================================
 
 # -----------------------------------
 # name = input("What is your name? ")
@@ -182,19 +285,16 @@
 # x.endswith("World")    # True
 
 # =================================================================
-
-
 # Напишите функцию, чтобы удалить символ с 
 # индексом n из непустой строки.
-
-# def remove_nth_index(string, index):
+def remove_nth_index(string, index):
 #     """ Удаляет букву из строки по индексу """
-#     return string[:index] + string[index+1:]
+    return string[:index] + string[index+1:]
+print(remove_nth_index("text", 2))
 
+# =================================================================
 
-# def del_first_middle_last(str):
-#     MIDDLE = len(str) // 2
-#     return str[1:MIDDLE] + str[MIDDLE+1:-1]
-
-
-# print(del_first_middle_last("Hello world"))
+def del_first_middle_last(str):
+    MIDDLE = len(str) // 2
+    return str[1:MIDDLE] + str[MIDDLE+1:-1]
+print(del_first_middle_last("Hello world"))
