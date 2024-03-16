@@ -195,21 +195,23 @@ def first_half_even(string):  # первая_половина_четная
     if len(string) % 2 == 0:
         return string[:len(string)//2]
     return string
+k = first_half_even("результаты")
+print(k)
 
 
 # 19. Write a Python program to concatenate two strings and return the result.
 # If the length of the strings are not same then remove the characters from the longer string.
 # RU: Напишите программу на Python для объединения двух строк и верните результат. Если длины строк не одинаковы,
 # то удалите символы из более длинной строки.
-
-
-def concat_strings(string1, string2):  # объединить_строки
-    if len(string1) == len(string2):
-        return string1 + string2
-    elif len(string1) > len(string2):
-        return string1[:len(string2)] + string2
+def concat_strings(str1, str2):  # объединить_строки
+    if len(str1) == len(str2):
+        return str1 + str2
+    elif len(str1) > len(str2):
+        return str1[:len(str2)] + str2
     else:
-        return string1 + string2[:len(string1)]
+        return str1 + str2[:len(str1)]
+l = concat_strings("test","tes")
+print(l)
 
 
 # 20. Write a Python function to convert a given string to all uppercase if it contains
@@ -220,30 +222,40 @@ def convert_upper(string):  # преобразовать_в_верхний_ре�
     if sum(1 for char in string[:4] if char.isupper()) >= 2:
         return string.upper()
     return string
+z = convert_upper("APple") 
+print(z)
 
 
 # 21. Write a Python program to remove a newline in Python.
 # RU: Напишите программу на Python, чтобы удалить перевод строки в Python.
 def remove_newline(string):  # удалить_перевод_строки
-    return string.replace('\n', '')
+    return string.replace('\n','')
+x = remove_newline("Hello\nWorld\n")
+print(x)
 
 
 # 22. Write a Python program to remove existing indentation from all of the lines in a given text.
 # RU: Напишите программу на Python для удаления существующего отступа из всех строк в заданном тексте.
 def remove_indentation(string):  # удалить_отступ
     return string.strip()
+c = remove_indentation("   test   ")
+print(c)
 
 
 # 23. Write a Python program to count and display the vowels of a given text.
 # RU: Напишите программу Python, чтобы подсчитать и отобразить гласные заданного текста.
 def count_vowels(string):  # подсчитать_гласные
-    vowels = 'aeiou'
-    return sum(1 for char in string if char in vowels)
+    vowles = 'aeiou'
+    return sum(1 for char in string if char in vowles)
+v = count_vowels("aeiow")
+print(v)
 
 
 # 24. Swapkeys
 def swap_cases(string):  # поменять_регистр
     return string.swapcase()
+b = swap_cases("CASES")
+print(b)
 
 
 # ====================================================================================================
@@ -259,100 +271,119 @@ def check_duplicate_letters(string) -> bool:
         if string.count(letter) > 1:
             return True
     return False
+n = check_duplicate_letters("test")
+print(n)
+
+
+def check_duplicate_letters(string):
+    for letter in string:
+        if string.count(letter) > 1:
+            return True
+    return False
+n = check_duplicate_letters("text")
+
     # return bool([letter for letter in string if string.count(letter) > 1])
+
 
 # ====================================================================================================
 # 26. Write a function that takes a sentence as argument, then takes last word's first letter and
 # repeats 5 times in the beginning of the sentence and at the end.
 # RU: Напишите функцию, которая принимает предложение в качестве аргумента, затем берет первую букву
 # последнего слова и повторяет 5 раз в начале предложения и в конце.
-
-
 def repeat_first_l_of_last_word(sentence):
     first_l = sentence.split(" ")[-1][0]
     return first_l*5 + sentence + first_l*5
     # last_w_first_l = sentence[sentence.rindex(" "):][1]
     # return sentence.center(len(sentence)+10, last_w_first_l)
+m = repeat_first_l_of_last_word("Hello world")
+print(m)
 
 
-repeat_first_l_of_last_word("Hello world")
+# def repeat_first_l_of_last_word(sentence):
+#     first_l = sentence.split(" ")[-1][0]
+#     return first_l*5 + sentence + first_l*5
+# m = repeat_first_l_of_last_word("Hello City")
+# print(m)
+
 # "wwwwwHello worldwwwww"
 # ====================================================================================================
 
-# 26. Write a code in Python to create a Morse code translator.
-# You can take a string with alphanumeric characters in lower or upper case.
-# The string can also have any special characters as a part of the Morse code.
-# Special characters can include commas, colons, apostrophes, exclamation marks,
-# periods, and question marks. The code should return the Morse code that is equivalent to the string.
 
-
-def morse_code(string):
-    morse_code_dict = {
-        'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.',
-        'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---',
-        'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---',
-        'P': '.--.', 'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-',
-        'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 'Y': '-.--',
-        'Z': '--..', '1': '.----', '2': '..---', '3': '...--',
-        '4': '....-', '5': '.....', '6': '-....', '7': '--...',
-        '8': '---..', '9': '----.', '0': '-----', ', ': '--..--',
-        '.': '.-.-.-', '?': '..--..', '/': '-..-.', '-': '-....-',
-        '(': '-.--.', ')': '-.--.-'
-    }
-    return ' '.join(morse_code_dict[i.upper()] for i in string)
-
+# 26. Напишите код на Python для создания переводчика азбуки Морзе.
+# Вы можете взять строку с буквенно-цифровыми символами в нижнем или верхнем регистре.
+# Строка также может содержать любые специальные символы, являющиеся частью кода Морзе.
+# Специальные символы могут включать запятые, двоеточия, апострофы, восклицательные знаки,
+# точки и вопросительные знаки. Код должен возвращать код Морзе, эквивалентный строке.
+# def morse_code(string):
+#     morse_code_dict = {
+#         'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.',
+#         'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---',
+#         'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---',
+#         'P': '.--.', 'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-',
+#         'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 'Y': '-.--',
+#         'Z': '--..', '1': '.----', '2': '..---', '3': '...--',
+#         '4': '....-', '5': '.....', '6': '-....', '7': '--...',
+#         '8': '---..', '9': '----.', '0': '-----', ', ': '--..--',
+#         '.': '.-.-.-', '?': '..--..', '/': '-..-.', '-': '-....-',
+#         '(': '-.--.', ')': '-.--.-'
+#     }
+#     return ' '.join(morse_code_dict[i.upper()] for i in string)
+# morse = morse_code("Hello, World!")
+# print(morse)
 # ====================================================================================================
 
 
-# 27. Write a function to detect 13th Friday. The function can accept two parameters,
-# and both will be numbers. The first parameter will be the number indicating the month,
-# and the second will be the year in four digits. Your function should parse the parameters,
-# and it must return True when the month contains a Friday with the 13th, else return False.
+# 27. Написать функцию для определения 13-й пятницы. Функция может принимать два параметра:
+# и оба будут числами. Первым параметром будет число, обозначающее месяц,
+#, а второй будет четырехзначным годом. Ваша функция должна анализировать параметры,
+# и он должен возвращать True, если в месяце есть пятница с 13-м числом, иначе возвращается False.
 def detect_13th_friday(month, year):
     import datetime
     return datetime.datetime(year, month, 13).weekday() == 4
+friday = detect_13th_friday(3,2020)
+print(friday)
 
 
 # ====================================================================================================
 
-# 28. Write a function to find the domain name from the IP address. The function will accept an
-# IP address, make a DNS request, and return the domain name that maps to that IP address while
-# using records of PTR DNS. You can import the Python socket library.
 
+
+# 28. Написать функцию для поиска доменного имени по IP-адресу. Функция примет
+# IP-адрес, сделайте запрос DNS и верните имя домена, которое соответствует этому IP-адресу, пока
+# с использованием записей PTR DNS. Вы можете импортировать библиотеку сокетов Python.
 def find_domain_name(ip_address):
     import socket
     return socket.gethostbyaddr(ip_address)[0]
-
-
 random_ip = "198.71.233.138"  # www.w3schools.com
 print(find_domain_name(random_ip))
 
 
 # ====================================================================================================
-# 29. Write a function in Python to convert a decimal to a hex. It must accept a string of ASCII
-# characters as input. The function should return the value of each character as a hexadecimal string.
-# You have to separate each byte by a space and return all alpha hexadecimal characters as lowercase.
-
+# 29. Напишите на Python функцию для преобразования десятичной дроби в шестнадцатеричную. Он должен принимать строку ASCII.
+# символов в качестве входных данных. Функция должна возвращать значение каждого символа в виде шестнадцатеричной строки.
+# Вам необходимо разделить каждый байт пробелом и вернуть все альфа-шестнадцатеричные символы в нижнем регистре.
 def convert_to_hex(string):
     return ' '.join(hex(ord(char))[2:] for char in string)
+hex = convert_to_hex("text")
+print(hex)
+
 
 # ====================================================================================================
-# 30. Write a function in Python to parse a string such that it accepts a parameter- an encoded string.
-# This encoded string will contain a first name, last name, and an id. You can separate the values
-# in the string by any number of zeros. The id will not contain any zeros. The function should return
-# a Python dictionary with the first name, last name, and id values. For example, if the input would
-# be "John000Doe000123". Then the function should return:
+# 30. Напишите функцию на Python для анализа строки так, чтобы она принимала параметр — закодированную строку.
+# Эта закодированная строка будет содержать имя, фамилию и идентификатор. Вы можете разделить значения
+# в строке любым количеством нулей. Идентификатор не будет содержать нулей. Функция должна вернуть
+# словарь Python со значениями имени, фамилии и идентификатора. Например, если ввод будет
+# "John000Doe000123". Тогда функция должна вернуть:
 # { "first_name": "John", "last_name": "Doe", "id": "123" }
-
-
 def encoded_string(string):
-    first_name, last_name, id = string.split("000")
+    first_name, last_name, id = string.split("000") 
     return {"first_name": first_name, "last_name": last_name, "id": id}
+encoded = encoded_string("Alex000Harrison000154")
+print(encoded)
+
 
 # ====================================================================================================
-# 31. Write a code in Python to find out whether a given string S is a valid regex or not.
-
-
+# 31. Напишите код на Python, чтобы узнать, является ли данная строка S допустимым регулярным выражением или нет.
 def is_valid_regex(string):
     import re
     try:
@@ -360,6 +391,10 @@ def is_valid_regex(string):
         return True
     except re.error:
         return False
+valid = is_valid_regex("validation")
+print(valid)
+
+
 # ====================================================================================================
 
 # 32. Create a function that takes a text and repeats the middle
@@ -367,13 +402,13 @@ def is_valid_regex(string):
 # RU: Создайте функцию, которая принимает текст и повторяет
 # среднюю букву три раза
 # Welcome   =>   Welcccome
-
-
 def repeat_middle(sentence):
     middle = len(sentence) // 2  # 3.5 => 3
     start = sentence[:middle]
     end = sentence[middle+1:]
     print(start + sentence[middle]*3 + end)
+repeat = repeat_middle("text")
+
 
 # =======================================================================================c=============
 
@@ -382,6 +417,15 @@ def repeat_middle(sentence):
 # "Welcome"  =>  "WelWelWelWelcomecomecomecome"
 
 
-def repeat_half_n_times(sentence, n):
-    pass
+def repeat_half_text(text, n):
+    half_length = len(text) // 2
+    first_half = text[:half_length]
+    second_half = text[half_length:]
+    repeated_text = (first_half * n) + (second_half * n)
+    return repeated_text
+
+# Пример использования
+result = repeat_half_text("Welcome", 3)
+print(result)  # Вывод: "WelWelWelWelcomecomecomecome"
+
 # =======================================================================================c=============
