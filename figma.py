@@ -14,7 +14,7 @@ def second_most_frequent(string):
     for i in string:
         dict[i] = string.count(i)
     return sorted(dict.items(), key=lambda x: x[1])[-2][0]
-y = second_most_frequent("словарь")
+y = second_most_frequent("философия")
 print(y)
 
 
@@ -45,3 +45,4 @@ print(n)
 
 # Функция проверяет если аргумент больше чем условие, то есть больше чем 1 повторение
 # значит в ней есть повторы букв он даст True
+
