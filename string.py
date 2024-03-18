@@ -811,13 +811,13 @@
 
 # # 27. Напишите программу на Python, которая объединяет все элементы списка в строку и возвращает ее.
 
-def concatenate_list_data(lst):
-    result = '' 
-    for element in lst:
-        result += str(element) 
+# def concatenate_list_data(lst):
+#     result = '' 
+#     for element in lst:
+#         result += str(element) 
 
-    return result  
-print(concatenate_list_data([1, 5, 12, 2]))
+#     return result  
+# print(concatenate_list_data([1, 5, 12, 2]))
 
 
 # ====================================================================================================
@@ -828,18 +828,18 @@ print(concatenate_list_data([1, 5, 12, 2]))
 # печать всех чисел после 237 в последовательности.
 
 
-numbers = [    
-    386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345, 
-    399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217, 
-    815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717, 
-    958,743, 527
-]
-for x in numbers:
-    if x == 237:
-        print(x) 
-        break 
-    elif x % 2 == 0:
-        print(x)  
+# numbers = [    
+#     386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345, 
+#     399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217, 
+#     815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717, 
+#     958,743, 527
+# ]
+# for x in numbers:
+#     if x == 237:
+#         print(x) 
+#         break 
+#     elif x % 2 == 0:
+#         print(x)  
 
 
 # ====================================================================================================
@@ -854,18 +854,18 @@ for x in numbers:
 # {'Черно-белый'}
 
 
-color_list_1 = set(["White", "Black", "Red"])
-color_list_2 = set(["Red", "Green"])
+# color_list_1 = set(["White", "Black", "Red"])
+# color_list_2 = set(["Red", "Green"])
 
-print("Original set elements:")
-print(color_list_1)
-print(color_list_2)
+# print("Original set elements:")
+# print(color_list_1)
+# print(color_list_2)
 
-print("\nDifference of color_list_1 and color_list_2:")
-print(color_list_1.difference(color_list_2))
+# print("\nDifference of color_list_1 and color_list_2:")
+# print(color_list_1.difference(color_list_2))
 
-print("\nDifference of color_list_2 and color_list_1:")
-print(color_list_2.difference(color_list_1))
+# print("\nDifference of color_list_2 and color_list_1:")
+# print(color_list_2.difference(color_list_1))
 
 
 #  ====================================================================================================
@@ -874,12 +874,12 @@ print(color_list_2.difference(color_list_1))
 # 30. Напишите программу на Python, которая будет принимать основание и 
 # высоту треугольника и вычислять его площадь.
 
-b = int(input("Input the base : "))
-h = int(input("Input the height : "))
+# b = int(input("Input the base : "))
+# h = int(input("Input the height : "))
 
-area = b * h / 2
+# area = b * h / 2
 
-print("area = ", area)
+# print("area = ", area)
 
 
 # ====================================================================================================
@@ -888,45 +888,45 @@ print("area = ", area)
 # 31. Напишите программу на Python, которая вычисляет наибольший общий делитель
 #  (НОД) двух положительных целых чисел.
 
-def gcd(x, y):
-    gcd = 1
+# def gcd(x, y):
+#     gcd = 1
     
-    if x % y == 0:
-        return y
+#     if x % y == 0:
+#         return y
     
-    for k in range(int(y / 2), 0, -1):
-        # Check if both x and y are divisible by k.
-        if x % k == 0 and y % k == 0:
-            gcd = k
-            break
+#     for k in range(int(y / 2), 0, -1):
+#         # Check if both x and y are divisible by k.
+#         if x % k == 0 and y % k == 0:
+#             gcd = k
+#             break
     
-    return gcd
+#     return gcd
 
-print("GCD of 12 & 17 =", gcd(12, 17))
-print("GCD of 4 & 6 =", gcd(4, 6))
-print("GCD of 336 & 360 =", gcd(336, 360))
+# print("GCD of 12 & 17 =", gcd(12, 17))
+# print("GCD of 4 & 6 =", gcd(4, 6))
+# print("GCD of 336 & 360 =", gcd(336, 360))
 
 # ====================================================================================================
 
 
 # 32. Напишите программу на Python, чтобы найти наименьшее общее кратное (НОК) двух положительных целых чисел.\
 
-def lcm(x, y):
-    if x > y:
-        z = x
-    else:
-        z = y
+# def lcm(x, y):
+#     if x > y:
+#         z = x
+#     else:
+#         z = y
     
-    while True:
-        if (z % x == 0) and (z % y == 0):
-            lcm = z
-            break
-        z += 1
+#     while True:
+#         if (z % x == 0) and (z % y == 0):
+#             lcm = z
+#             break
+#         z += 1
     
-    return lcm
+#     return lcm
 
-print(lcm(4, 6))
-print(lcm(15, 17))
+# print(lcm(4, 6))
+# print(lcm(15, 17))
 
 
 #  ====================================================================================================
@@ -935,16 +935,16 @@ print(lcm(15, 17))
 # 33. Напишите программу на Python для суммирования трех заданных целых чисел.
 #  Однако если два значения равны, сумма будет равна нулю.
 
-def sum_three(x, y, z):
-    if x == y or y == z or x == z:
-        sum = 0
-    else:
-        sum = x + y + z
-    return sum
+# def sum_three(x, y, z):
+#     if x == y or y == z or x == z:
+#         sum = 0
+#     else:
+#         sum = x + y + z
+#     return sum
 
-print(sum_three(2, 1, 2))
-print(sum_three(3, 2, 2))
-print(sum_three(2, 2, 2))
+# print(sum_three(2, 1, 2))
+# print(sum_three(3, 2, 2))
+# print(sum_three(2, 2, 2))
 
 
 #  ====================================================================================================
@@ -954,30 +954,1508 @@ print(sum_three(2, 2, 2))
 # Однако, если сумма находится между 15 и 20, она вернет 20.
 
 
-def sum(x, y):
-    sum = x + y
-    if sum in range(15, 20):
-        return 20
-    else:
-        return sum
+# def sum(x, y):
+#     sum = x + y
+#     if sum in range(15, 20):
+#         return 20
+#     else:
+#         return sum
 
-print(sum(10, 6))
-print(sum(10, 2))
-print(sum(10, 12))
+# print(sum(10, 6))
+# print(sum(10, 2))
+# print(sum(10, 12))
 
 
  # ====================================================================================================
-
 
 # 35. Напишите программу на Python, которая возвращает true, если два заданных 
 # целочисленных значения равны или их сумма или разница равна 5.
 
 
-
-
-
+# def test_number5(x, y):
+#     if x == y or abs(x - y) == 5 or (x + y) == 5:
+#         return True
+#     else:
+#         return False
+# print(test_number5(2, 2))
+# print(test_number5(27, 53))
 
 
  # ====================================================================================================
+
+# 36. Напишите программу на Python для добавления двух объектов,
+# если оба объекта являются целыми числами.
+
+# def add_numbers(a, b):
+#     if not (isinstance(a, int) and isinstance(b, int)):
+#         return "Inputs must be integers!"
+#     return a + b
+
+# print(add_numbers(10, 20))    
+# print(add_numbers(10, 20.23)) 
+# print(add_numbers('5', 6))     
+# print(add_numbers('5', '6'))
+
+
+ # ====================================================================================================
+
+# 37. Напишите программу на Python,
+# которая отображает ваше имя, возраст и адрес в трех разных строках.
+
+# def personal_details():
+#     name, age = "Simon", 19
+#     address = "Bangalore, Karnataka, India"
+#     print("Name: {}\n Age: {}\n Address: {}".format(name, age, address))
+# personal_details()
+
+
+ # ====================================================================================================
+
+# 38. Напишите программу на Python для решения (x + y) * (x + y).
+# Тестовые данные: x = 4, y = 3
+# Ожидаемый результат: (4 + 3) ^ 2) = 49
+
+# x, y = 4, 3
+# result = x * x + 2 * x * y + y * y
+# print("({} + {}) ^ 2) = {}".format(x, y, result))
+
+
+ # ====================================================================================================
+
+# 39. Напишите программу на Python для расчета будущей стоимости
+#  указанной основной суммы, процентной ставки и количества лет.
+# Тестовые данные: amt = 10000, int = 3,5, годы = 7.
+
+# amt = 10000
+# int = 3.5
+# years = 7
+# future_value = amt * ((1 + (0.01 * int)) ** years)
+# print(round(future_value, 2))
+
+
+ # ====================================================================================================
+
+# 40. Напишите программу на Python для расчета расстояния между точками
+# (x1, y1) и (x2, y2).
+
+# import math
+
+# p1 = [4, 0]
+
+# p2 = [6, 6]
+
+# distance = math.sqrt(((p1[0] - p2[0]) ** 2) + ((p1[1] - p2[1]) ** 2))
+
+# print(distance)
+
+
+ # ====================================================================================================
+
+# 41. Напишите программу на Python, проверяющую существование файла.
+
+# import os.path
+
+# print(os.path.isfile('main.txt'))
+
+# isfile - проверяет есть ли такой файл в ...
+
+
+ # ====================================================================================================
+
+# 42. Напишите программу Python, чтобы определить, 
+# работает ли оболочка Python в 32-битном или 64-битном режиме ОС.
+
+# import struct
+# print(struct.calcsize("P") * 8)
+
+
+ # ====================================================================================================
+
+# 43. Напишите программу на Python, чтобы получить название ОС, платформу и информацию о выпуске.
+
+# import platform
+# import os
+
+# print("Name system:", os.name)
+
+# print("\nName  OS :", platform.system())
+
+# print("\nVersion system:", platform.release())
+
+
+ # ====================================================================================================
+
+# 44. Напишите программу Python для поиска пакетов сайта Python.
+
+
+# import site
+
+# print(site.getsitepackages())
+
+
+ # ====================================================================================================
+
+# 45. Напишите программу на Python, вызывающую внешнюю команду.
+
+
+# from subprocess import call
+
+# call(["ls", "-l"])
+
+
+ # ====================================================================================================
+
+# 46. ​​Напишите программу на Python для получения пути и имени файла, исполняемого в данный момент.
+
+# import os
+# print("Current File Name: ", os.path.realpath(__file__))
+
+
+ # ====================================================================================================
+
+# 47. Напишите программу на Python, чтобы узнать количество используемых процессоров.
+
+# import multiprocessing
+
+# cpu_count = multiprocessing.cpu_count()
+
+# print(cpu_count)
+
+
+ # ====================================================================================================
+
+# 48. Напишите программу на Python для преобразования строки в число с плавающей запятой или целое число.
+
+# n = "246.2458"
+# print(float(n))
+# print(int(float(n)))
+
+
+ # ====================================================================================================
+
+
+# 49. Напишите программу на Python для вывода списка всех файлов в каталоге.
+
+# from os import listdir
+# from os.path import isfile, join
+
+# files_list = [f for f in listdir('/home/students') if isfile(join('/home/students', f))]
+
+# print(files_list)
+
+
+ # ====================================================================================================
+
+# 50. Напишите программу на Python для печати без новой строки и пробела.
+
+# for i in range(0, 10):
+#     print('*', end="")
+# print("\n")
+
+
+ # ====================================================================================================
+
+# 51. Напишите программу на Python для определения профилирования программ на Python.
+# Примечание. Профиль — это набор статистических данных, описывающих, как часто и 
+# как долго выполняются различные части программы. Эту статистику можно форматировать
+
+# import cProfile
+# def sum():
+#    print(1 + 2)
+# cProfile.run('sum()')
+
+
+ # ====================================================================================================
+
+# 52. Напишите программу на Python для печати в STDERR.
+
+# from __future__ import print_function
+
+# import sys
+# def eprint(*args, **kwargs):
+
+#     print(*args, file=sys.stderr, **kwargs)
+
+# eprint("abc", "efg", "xyz", sep="--")
+
+ # ====================================================================================================
+
+# 53. Напишите программу на Python для доступа к переменным среды.
+
+# import os
+
+# print('*----------------------------------*')
+
+# print(os.environ)
+
+# print('*----------------------------------*')
+
+# print(os.environ['HOME'])
+
+# print('*----------------------------------*')
+
+# print(os.environ['PATH'])
+
+# print('*----------------------------------*')
+
+ # ====================================================================================================
+
+# 54. Напишите программу на Python, чтобы получить текущее имя пользователя.
+
+# import getpass
+# print(getpass.getuser())
+
+
+ # ====================================================================================================
+
+# 55. Напишите программу Python для поиска локальных IP-адресов, используя stdlib Python.
+
+# import socket
+
+# local_hostname = socket.gethostname()
+
+# ip_addresses = socket.gethostbyname_ex(local_hostname)[2]
+
+# filtered_ips = [ip for ip in ip_addresses if not ip.startswith("127.")]
+
+# first_ip = filtered_ips[:1]
+
+# print(first_ip[0])
+
+ # ====================================================================================================
+
+# 56. Напишите программу на Python, чтобы получить высоту и ширину окна консоли.
+
+# import fcntl
+# import termios
+# import struct
+
+# def terminal_size():
+
+#     th, tw, hp, wp = struct.unpack('HHHH', fcntl.ioctl(0, termios.TIOCGWINSZ, struct.pack('HHHH', 0, 0, 0, 0)))
+
+#     return tw, th
+
+# print('Number of columns and Rows: ', terminal_size())
+
+ # ====================================================================================================
+
+# 57. Напишите программу на Python, чтобы получить время выполнения метода Python.
+
+# import time
+
+# def sum_of_n_numbers(n):
+#     start_time = time.time()
+
+#     s = 0
+
+#     for i in range(1, n + 1):
+#         s = s + i
+
+#     end_time = time.time()
+
+#     return s, end_time - start_time
+
+# n = 5
+
+# print("\nTime to sum of 1 to", n, "and required time to calculate is:", sum_of_n_numbers(n))
+
+
+ # ====================================================================================================
+
+# 58. Напишите программу на Python для суммирования первых n натуральных чисел.
+
+# n = int(input("Input a number: "))
+
+# sum_num = (n * (n + 1)) / 2
+
+# print("Sum of the first", n, "positive integers:", sum_num)
+
+
+ # ====================================================================================================
+
+# 59. Напишите программу на Python для преобразования высоты (в футах и ​​дюймах) в сантиметры.
+
+# print("Input your height: ")
+
+# h_ft = int(input("Feet: "))
+
+# h_inch = int(input("Inches: "))
+
+# h_inch += h_ft * 12
+
+# h_cm = round(h_inch * 2.54, 1)
+
+# print("Your height is : %d cm." % h_cm)
+
+
+ # ====================================================================================================
+
+# 60. Напишите программу на Python для вычисления гипотенузы прямоугольного треугольника.
+
+# from math import sqrt
+
+# print("Input lengths of shorter triangle sides:")
+
+# a = float(input("a: "))
+
+# b = float(input("b: "))
+
+# c = sqrt(a**2 + b**2)
+
+# print("The length of the hypotenuse is:", c)
+
+ # ====================================================================================================
+
+# 61. Напишите программу на Python для преобразования расстояния (в футах) в дюймы, ярды и мили.
+
+# d_ft = int(input("Input distance in feet: "))
+
+# d_inches = d_ft * 12
+
+# d_yards = d_ft / 3.0
+
+# d_miles = d_ft / 5280.0
+
+# print("The distance in inches is %i inches." % d_inches)
+# print("The distance in yards is %.2f yards." % d_yards)
+# print("The distance in miles is %.2f miles." % d_miles)
+
+
+ # ====================================================================================================
+
+# 62. Напишите программу на Python для преобразования всех единиц времени в секунды.
+
+# days = int(input("Input days: ")) * 3600 * 24
+
+# hours = int(input("Input hours: ")) * 3600
+
+# minutes = int(input("Input minutes: ")) * 60
+
+# seconds = int(input("Input seconds: "))
+
+# time = days + hours + minutes + seconds
+
+# print("The amount of seconds:", time)
+
+
+ # ====================================================================================================
+
+# 63. Напишите программу на Python, чтобы получить абсолютный путь к файлу.
+
+# def absolute_file_path(path_fname):
+#     import os
+#     return os.path.abspath(path_fname)
+# print("Absolute file path: ", absolute_file_path("test.txt"))
+
+
+ # ====================================================================================================
+
+# 64. Напишите программу на Python, которая извлекает дату и время создания и изменения файла.
+
+# import os.path, time
+
+# print("Last modified: %s" % time.ctime(os.path.getmtime("test.txt")))
+
+# print("Created: %s" % time.ctime(os.path.getctime("test.txt")))
+
+ # ====================================================================================================
+
+# 65. Напишите программу на Python, которая преобразует секунды в дни, часы, минуты и секунды.
+
+# time = float(input("Input time in seconds: "))
+
+# day = time // (24 * 3600)
+
+# time = time % (24 * 3600)
+
+# hour = time // 3600
+
+# time %= 3600
+
+# minutes = time // 60
+
+# time %= 60
+
+# seconds = time
+ 
+# print("d:h:m:s-> %d:%d:%d:%d" % (day, hour, minutes, seconds))
+
+ # ====================================================================================================
+
+# 66. Напишите программу на Python для расчета индекса массы тела.
+
+# height = float(input("Input your height in Feet: "))
+
+# weight = float(input("Input your weight in Kilograms: "))
+
+# bmi = weight / (height * height)
+# rounded_bmi = round(bmi, 2)
+
+# print("Your body mass index is: ", rounded_bmi)
+
+
+ # ====================================================================================================
+
+# 67. Напишите программу на Python для преобразования давления в килопаскалях в фунты на квадратный дюйм, миллиметр ртутного столба (мм рт. ст.) и атмосферное давление.
+
+# kpa = float(input("Input pressure in kilopascals: "))
+
+# psi = kpa / 6.89475729
+
+# mmhg = kpa * 760 / 101.325
+
+# atm = kpa / 101.325
+
+# print("The pressure in pounds per square inch: %.2f psi"  % (psi))
+
+# print("The pressure in millimeters of mercury: %.2f mmHg" % (mmhg))
+
+# print("Atmosphere pressure: %.2f atm." % (atm))
+
+
+ # ====================================================================================================
+
+# 68. Напишите программу на Python для вычисления суммы цифр числа.
+
+# num = int(input("Input a four-digit number: "))
+
+# x = num // 1000
+
+# x1 = (num - x * 1000) // 100
+
+# x2 = (num - x * 1000 - x1 * 100) // 10
+
+# x3 = num - x * 1000 - x1 * 100 - x2 * 10
+
+# print("The sum of digits in the number is", x + x1 + x2 + x3)
+
+
+ # ====================================================================================================
+
+# 69. Напишите программу на Python для сортировки трех целых чисел без использования условных операторов и циклов.
+
+# x = int(input("Input first number: "))
+# y = int(input("Input second number: "))
+# z = int(input("Input third number: "))
+
+# a1 = min(x, y, z)
+
+# a3 = max(x, y, z)
+
+# a2 = (x + y + z) - a1 - a3
+
+# print("Numbers in sorted order: ", a1, a2, a3)
+
+
+ # ====================================================================================================
+
+# 70. Напишите программу на Python для сортировки файлов по дате.
+
+# import glob
+# import os
+
+# files = glob.glob("*.txt")
+
+# files.sort(key=os.path.getmtime)
+
+# print("\n".join(files))
+
+
+  # ====================================================================================================
+
+# 71. Напишите программу на Python, чтобы получить список каталогов, отсортированный по дате создания.
+
+# from stat import S_ISREG, ST_CTIME, ST_MODE
+# import os, sys, time
+
+# dir_path = sys.argv[1] if len(sys.argv) == 2 else r'.'
+
+# data = (os.path.join(dir_path, fn) for fn in os.listdir(dir_path))
+
+# data = ((os.stat(path), path) for path in data)
+
+# data = ((stat[ST_CTIME], path) for stat, path in data if S_ISREG(stat[ST_MODE]))
+
+# for cdate, path in sorted(data):
+#     print(time.ctime(cdate), os.path.basename(path)) 
+
+
+  # ====================================================================================================
+
+# 72. Напишите программу на Python, чтобы получить подробную информацию о математическом модуле.
+
+# import math            
+# math_ls = dir(math)
+# print(math_ls)
+
+
+  # ====================================================================================================
+
+# 73. Напишите программу на Python для вычисления средних точек линии.
+
+# print('\nCalculate the midpoint of a line :')
+
+# x1 = float(input('The value of x (the first endpoint) '))
+# y1 = float(input('The value of y (the first endpoint) '))
+
+# x2 = float(input('The value of x (the first endpoint) '))
+# y2 = float(input('The value of y (the first endpoint) '))
+
+# x_m_point = (x1 + x2)/2
+
+# y_m_point = (y1 + y2)/2
+# print();
+
+# print("The midpoint of the line is :")
+
+# print( "The midpoint's x value is: ", x_m_point)
+
+# print( "The midpoint's y value is: ", y_m_point)
+
+  # ====================================================================================================
+
+# 74. Напишите программу на Python для хеширования слова.
+
+# soundex = [0, 1, 2, 3, 0, 1, 2, 0, 0, 2, 2, 4, 5, 5, 0, 1, 2, 6, 2, 3, 0, 1, 0, 2, 0, 2]
+
+# word = input("Input the word to be hashed: ")
+
+# word = word.upper()
+
+# coded = word[0]
+
+# for a in word[1:len(word)]:
+#     i = 65 - ord(a)
+#     coded = coded + str(soundex[i])
+
+# print()
+
+# print("The coded word is: " + coded)
+
+# print()
+
+  # ====================================================================================================
+
+# 75. Напишите программу на Python, чтобы получить информацию об авторских правах, и запишите информацию об авторских правах в коде Python.
+
+# import sys
+
+# print("\nPython Copyright Information")
+
+# print(sys.copyright)
+
+# print()
+
+  # ====================================================================================================
+
+# 76. Напишите программу на Python, чтобы получить аргументы командной строки (имя сценария, количество аргументов, аргументы), передаваемые в сценарий.
+
+# import sys
+
+# print("This is the name/path of the script:"), sys.argv[0]
+
+# print("Number of arguments:", len(sys.argv))
+
+# print("Argument List:", str(sys.argv))
+
+
+  # ====================================================================================================
+
+# 77. Напишите программу на Python, чтобы проверить, является ли система платформой с прямым порядком байтов или с прямым порядком байтов.
+
+# import sys
+
+# print()
+
+# if sys.byteorder == "little":
+#     print("Little-endian platform.")
+# else:
+#     print("Big-endian platform.")
+
+# print()
+
+  # ====================================================================================================
+
+# 78. Напишите программу на Python, чтобы найти доступные встроенные модули.
+
+# import sys
+# import textwrap
+# module_name = ', '.join(sorted(sys.builtin_module_names))
+# print(textwrap.fill(module_name, width=70))
+
+  # ====================================================================================================
+
+# 79. Напишите программу на Python, чтобы получить размер объекта в байтах.
+
+# import sys 
+
+# str1 = "one"
+# str2 = "four"
+# str3 = "three"
+# x = 0
+# y = 112
+# z = 122.56
+
+# print("Size of ", str1, "=", str(sys.getsizeof(str1)) + " bytes")
+# print("Size of ", str2, "=", str(sys.getsizeof(str2)) + " bytes")
+# print("Size of ", str3, "=", str(sys.getsizeof(str3)) + " bytes")
+# print("Size of", x, "=", str(sys.getsizeof(x)) + " bytes")
+# print("Size of", y, "=", str(sys.getsizeof(y)) + " bytes")
+
+# L = [1, 2, 3, 'Red', 'Black']
+
+# print("Size of", L, "=", sys.getsizeof(L), " bytes")
+
+# T = ("Red", [8, 4, 6], (1, 2, 3))
+
+# print("Size of", T, "=", sys.getsizeof(T), " bytes")
+
+# S = {'apple', 'orange', 'apple', 'pear'}
+
+# print("Size of", S, "=", sys.getsizeof(S), " bytes")
+
+# D = {'Name': 'David', 'Age': 6, 'Class': 'First'}
+
+# print("Size of", D, "=", sys.getsizeof(S), " bytes")
+
+
+  # ====================================================================================================
+
+# 80. Напишите программу на Python, чтобы получить текущее значение предела рекурсии.
+
+# import sys  
+# print()  
+# print("Current value of the recursion limit:")  
+# print(sys.getrecursionlimit())  
+# print()  
+
+
+  # ====================================================================================================
+
+# 81. Напишите программу на Python для объединения N строк.
+
+# colors_list = ['Red', 'White', 'Black'] 
+# colors = '-'.join(colors_list) 
+# print("Colors: " + colors)
+
+  # ====================================================================================================
+
+# 82. Напишите программу на Python для вычисления суммы всех элементов контейнера (кортежа, списка, набора, словаря).
+
+# s = sum([10, 20, 30])
+# print("result:",s)
+
+  # ====================================================================================================
+
+# 83. Напишите программу на Python, проверяющую, все ли числа в списке больше определенного числа.
+
+# num = [2, 3, 4, 5]
+# print(all(x > 1 for x in num))
+# print(all(x > 4 for x in num))
+
+  # ====================================================================================================
+
+# 84. Напишите программу на Python для подсчета количества вхождений определенного символа в строку.
+
+# s = "The quick brown fox jumps over the lazy dog."
+# print(s.count("o"))
+
+  # ====================================================================================================
+
+# 85. Напишите программу на Python, чтобы проверять, является ли путь к файлу файлом или каталогом.
+
+# import os
+# path = "abc.txt"
+# if os.path.isdir(path):
+#     print("\nIt is a directory")
+# elif os.path.isfile(path):
+#     print("\nIt is a normal file")
+# else:
+#     print("It is a special file (socket, FIFO, device file)")
+
+  # ====================================================================================================
+
+# 86. Напишите программу на Python, чтобы получить значение ASCII символа.
+
+# print(ord('a'))
+# print(ord('A'))
+# print(ord('1'))
+# print(ord('@'))
+
+  # ====================================================================================================
+
+# 87. Напишите программу на Python, чтобы получить размер файла.
+
+# import os
+# file_size = os.path.getsize("abc.txt")
+# print("\nThe size of abc.txt is:", file_size, "Bytes")
+
+  # ====================================================================================================
+
+# 88. Учитывая переменные x=30 и y=20, напишите программу Python для вывода «30+20=50».
+
+# x = 30
+# y = 20
+# print("\n%d+%d=%d" % (x, y, x+y))
+
+  # ====================================================================================================
+
+# 89. Напишите программу на Python, выполняющую действие, если условие истинно.
+# Учитывая имя переменной, если значение равно 1, отобразите строку «Первый день месяца!» и ничего не делать, если значение не равно.
+
+# n = 1
+# if n == 1:
+#   print("\nFirst day of a Month!")
+# print()
+
+  # ====================================================================================================
+
+# 90. Напишите программу на Python, создающую копию собственного исходного кода.
+
+# def file_copy(src, dest):
+#     with open(src) as f, open(dest, 'w') as d:
+
+# file_copy("untitled0.py", "z.py")
+
+# with open('z.py', 'r') as filehandle:
+#     for line in filehandle:
+#         print(line, end = '')
+
+  # ====================================================================================================
+
+# 91. Напишите программу на Python для замены двух переменных.
+
+# a = 30
+# b = 20
+# print("\nBefore swap a = %d and b = %d" %(a, b))
+# a, b = b, a
+# print("\nAfter swaping a = %d and b = %d" %(a, b))
+
+  # ====================================================================================================
+
+# 92. Напишите программу на Python для определения строки,
+#  содержащей специальные символы в различных формах.
+
+# print("\#{'}${\"}@/")
+# print("\#{'}${\"}@/")
+# print(r"""\#{'}${"}@/""")
+# print('\#{\'}${"}@/')
+# print('\#{'"'"'}${"}@/')
+# print(r'''\#{'}${"}@/''')
+
+  # ====================================================================================================
+
+# 93. Напишите программу на Python, чтобы получить идентификатор, тип и значение объекта.
+
+x = 34
+print("\nIdentity: ", x)
+print("\nType: ", type(x))
+print("\nValue: ", id(x))
+
+
+  # ====================================================================================================
+
+# 94. Напишите программу на Python для преобразования 
+#     байтов заданной строки в список целых чисел.
+
+# S = "The quick brown fox jumps over the lazy dog."
+# print("Original string:")
+# print(S)
+# nums = []
+# print("\nConvert bytes of the said string to a list of integers:")
+# for chr in S:
+#     nums.append(ord(chr))
+# print(nums)
+
+
+  # ====================================================================================================
+
+# 95. Напишите программу на Python, проверяющую, является ли строка числовой.
+
+# str = 'a123'
+# try:
+#     i = float(str)
+# except (ValueError, TypeError):
+#     print('\nNot numeric')
+# print()
+
+
+  # ====================================================================================================
+
+# 96. Напишите программу на Python для печати текущего стека вызовов.
+
+# import traceback
+# print()
+# def f1():
+#     return abc()
+# def abc():
+#     traceback.print_stack()
+# f1()
+# print()
+
+  # ====================================================================================================
+
+# 97. Напишите программу на Python, чтобы вывести список специальных переменных, используемых в языке.
+
+# s_var_names = sorted((set(globals().keys()) | set(__builtins__.__dict__.keys())) - set('_ names i'.split()))
+# print( '\n'.join(' '.join(s_var_names[i:i+8]) for i in range(0, len(s_var_names), 8)) )
+
+
+  # ====================================================================================================
+
+# 98. Напишите программу на Python для получения системного времени.
+
+# import time
+# print(time.ctime())
+
+
+  # ====================================================================================================
+
+# 99. Напишите программу на Python для очистки экрана или терминала.
+
+# import os
+# import time
+# os.system("ls")
+# time.sleep(2)
+# os.system('clear')
+
+
+  # ====================================================================================================
+
+# 100. Напишите программу на Python, чтобы получить имя хоста, на котором выполняется процедура.
+
+# import socket
+# host_name = socket.gethostname()
+# print("Host name:", host_name)
+
+  # ====================================================================================================
+
+# 101. Напишите программу на Python для доступа и вывода содержимого URL-адреса на консоль.
+
+# from http.client import HTTPConnection
+# conn = HTTPConnection("example.com")
+# conn.request("GET", "/")
+# result = conn.getresponse()
+# contents = result.read()
+# print(contents)
+
+  # ====================================================================================================
+
+# 102. Напишите программу на Python для получения вывода системной команды.
+
+# import subprocess
+# returned_text = subprocess.check_output("dir", shell=True, universal_newlines=True)
+# print(returned_text)
+
+  # ====================================================================================================
+
+#  103. Напишите программу на Python для извлечения имени файла по заданному пути.
+
+# import os
+# print(os.path.basename('/users/system1/student1/homework-1.py'))
+
+  # ====================================================================================================
+
+# 104. Напишите программу на Python, чтобы получить эффективный идентификатор группы, эффективный идентификатор пользователя, реальный идентификатор группы и список дополнительных идентификаторов групп, связанных с текущим процессом.
+# Примечание. Доступность: Unix.
+
+# import os
+# print("Effective group id: ", os.getegid())
+# print("Effective user id: ", os.geteuid())
+# print("Real group id: ", os.getgid())
+# print("List of supplemental group ids: ", os.getgroups())
+
+
+  # ====================================================================================================
+
+# 105. Напишите программу на Python, чтобы получить среду пользователя.
+
+# import os
+# print(os.environ)
+
+  # ====================================================================================================
+
+# 106. Напишите программу на Python для разделения пути разделителем расширений.
+
+# import os.path
+# for path in ['test.txt', 'filename', '/user/system/test.txt', '/', '']:
+#     print('"%s" :' % path, os.path.splitext(path))
+
+  # ====================================================================================================
+
+# 107. Напишите программу на Python для получения свойств файла.
+
+# import os.path
+# import time
+
+# print('File         :', __file__)
+# print('Access time  :', time.ctime(os.path.getatime(__file__)))
+# print('Modified time:', time.ctime(os.path.getmtime(__file__)))
+# print('Change time  :', time.ctime(os.path.getctime(__file__)))
+# print('Size         :', os.path.getsize(__file__))
+
+  # ====================================================================================================
+
+# 108. Напишите программу на Python, чтобы найти путь к файлу или каталогу, когда вы встретите имя пути.
+
+# import os.path
+# for file in [__file__, os.path.dirname(__file__), '/', './broken_link']:
+#     print('File        :', file)
+#     print('Absolute    :', os.path.isabs(file))
+#     print('Is File?    :', os.path.isfile(file))
+#     print('Is Dir?     :', os.path.isdir(file))
+#     print('Is Link?    :', os.path.islink(file))
+#     print('Exists?     :', os.path.exists(file))
+#     print('Link Exists?:', os.path.lexists(file))
+
+
+  # ====================================================================================================
+
+# 109. Напишите программу на Python, чтобы найти путь к файлу или каталогу, когда вы встретите имя пути.
+
+# num = float(input("Input a number: "))
+
+# if num > 0:
+#    print("It is a positive number")
+# elif num == 0:
+#    print("It is zero")
+# else:
+#    print("It is a negative number")
+
+  # ====================================================================================================
+
+# 110. Напишите программу на Python, позволяющую получать из списка числа, кратные пятнадцати, с помощью анонимной функции.
+
+# num_list = [45, 55, 60, 37, 100, 105, 220]
+# result = list(filter(lambda x: (x % 15 == 0), num_list))
+# print("Numbers divisible by 15 are", result)
+
+
+  # ====================================================================================================
+
+# 111. Напишите программу на Python для создания списков файлов из текущего каталога с использованием подстановочных знаков.
+
+# import glob
+# file_list = glob.glob('*.*')
+
+# print(file_list)
+
+# print(glob.glob('*.py'))
+
+# print(glob.glob('./[0-9].*'))
+
+  # ====================================================================================================
+
+# 112. Напишите программу на Python для удаления первого элемента из указанного списка.
+
+# color = ["Red", "Black", "Green", "White", "Orange"]
+# del color[0]
+# print(color)
+
+ 
+  # ====================================================================================================
+
+# 113. Напишите программу на Python, которая вводит число и генерирует сообщение об ошибке, если это не число.
+
+# while True:
+#     try:
+#         a = int(input("Input a number: "))
+#         break
+#     except ValueError:
+#         print("\nThis is not a number. Try again...")
+
+
+  # ====================================================================================================
+
+# 114. Напишите программу на Python для фильтрации положительных чисел из списка.
+
+
+# nums = [34, 1, 0, -23, 12, -88]
+# new_nums = list(filter(lambda x: x > 0, nums))
+# print("Positive list: ", new_nums)
+
+  # ====================================================================================================
+
+# def  remove_nth_index(str,index): 
+#     return str[:index] + str[index + 1:] 
+# print(remove_nth_index("He l lo", 2))
+ 
+  # ====================================================================================================
+
+# 115. Напишите программу на Python для вычисления произведения списка целых чисел (без использования цикла for).
+
+# from functools import reduce
+# nums = [10, 20, 30]
+# nums_product = reduce((lambda x, y: x * y), nums)
+# print("\nProduct of the said numbers: ", nums_product)
+
+
+  # ====================================================================================================
+
+# 116. Напишите программу на Python для печати символов Юникода.
+
+# str = u'\u0050\u0079\u0074\u0068\u006f\u006e \u0045\u0078\u0065\u0072\u0063\u0069\u0073\u0065\u0073 \u002d \u0077\u0033\u0072\u0065\u0073\u006f\u0075\u0072\u0063\u0065'
+# print(str)
+ 
+  # ====================================================================================================
+
+# 117. Напишите программу на Python, чтобы доказать, что две строковые переменные с одинаковым значением указывают на одну и ту же ячейку памяти.
+
+# str1 = "Python"
+# str2 = "Python"
+# print("\nMemory location of str1 =", hex(id(str1)))
+# print("Memory location of str2 =", hex(id(str2)))
+
+ 
+  # ====================================================================================================
+
+# 118. Напишите программу на Python для создания массива байтов из списка.
+
+# nums = [10, 20, 56, 35, 17, 99]
+# values = bytearray(nums)
+# for x in values:
+#     print(x)
+
+ 
+  # ====================================================================================================
+
+# 119. Напишите программу на Python для округления числа с плавающей запятой до заданного количества десятичных знаков.
+
+# order_amt = 212.374
+# print('\nThe total order amount comes to %f' % order_amt)
+# print('The total order amount comes to %.2f' % order_amt)
+
+
+  # ====================================================================================================
+
+# 120. Напишите программу на Python для форматирования указанной строки и ограничения ее длины.
+
+# str_num = "1234567890"
+# print("Original string:", str_num)
+# print('%.6s' % str_num)
+# print('%.9s' % str_num)
+# print('%.10s' % str_num)
+
+
+ 
+  # ====================================================================================================
+
+# 121. Напишите программу на Python, чтобы определить, определена переменная или нет.
+
+# try:
+#   x = 1
+# except NameError:
+#   print("Variable is not defined....!")
+# else:
+#   print("Variable is defined.")
+
+# try:
+#   y
+# except NameError:
+#   print("Variable is not defined....!")
+# else:
+#   print("Variable is defined.")
+  
+ 
+  # ====================================================================================================
+
+# 122. Напишите программу на Python, чтобы очистить переменную, не уничтожая ее.
+
+# Выборочные данные: n=20
+# д = {"х":200}
+# Ожидаемый результат: 0
+# {}
+
+# n = 20
+# d = {"x": 200}
+# l = [1, 3, 5]
+# t = (5, 7, 8)
+# print(type(n)())
+# print(type(d)())
+# print(type(l)())
+# print(type(t)())
+ 
+  # ====================================================================================================
+
+# 123. Напишите программу на Python для определения наибольшего и наименьшего целых чисел, чисел long и чисел с плавающей запятой.
+
+# import sys
+# print("Float value information: ", sys.float_info)
+# print("\nInteger value information: ", sys.int_info)
+# print("\nMaximum size of an integer: ", sys.maxsize)
+
+ 
+  # ====================================================================================================
+
+# 124. Напишите программу на Python, чтобы проверять, имеют ли несколько переменных одинаковое значение.
+
+# x = 20
+# y = 20
+# z = 20
+# if x == y == z == 20:
+#     print("All variables have the same value!")
+
+ 
+  # ====================================================================================================
+
+# 125. Напишите программу на Python для суммирования всех счетчиков в коллекции.
+
+# import collections
+# num = [2, 2, 4, 6, 6, 8, 6, 10, 4]
+# result = sum(collections.Counter(num).values())
+# print(result)
+
+ 
+  # ====================================================================================================
+
+# 126. Напишите программу на Python, чтобы получить фактический объект модуля для данного объекта.
+
+# from inspect import getmodule
+# from math import sqrt
+# print(getmodule(sqrt))
+
+ 
+  # ====================================================================================================
+
+# 127. Напишите программу на Python, проверяющую, помещается ли целое число в 64 бита.
+
+# int_val = 30
+
+# if int_val.bit_length() <= 63:
+#     print((-2 ** 63).bit_length())
+#     print((2 ** 63).bit_length())
+
+ 
+  # ====================================================================================================
+
+# 128. Напишите программу на Python, проверяющую наличие в строке строчных букв.
+
+# str1 = 'A8238i823acdeOUEI'
+# print(any(c.islower() for c in str1))
+
+ 
+  # ====================================================================================================
+
+# 129. Напишите программу на Python для добавления ведущих нулей в строку.
+
+# str1 = '122.22'
+# print("Original String: ", str1)
+# print("\nAdded trailing zeros:")
+# str1 = str1.ljust(8, '0')
+# print(str1)
+# str1 = str1.ljust(10, '0')
+# print(str1)
+# print("\nAdded leading zeros:")
+# str1 = '122.22'
+# str1 = str1.rjust(8, '0')
+# print(str1)
+# str1 = str1.rjust(10, '0')
+# print(str1) 
+
+ 
+  # ====================================================================================================
+
+# 130. Напишите программу на Python, которая использует двойные кавычки для отображения строк.
+
+# import json
+# data = {'Alex': 1, 'Suresh': 2, 'Agnessa': 3}
+
+# json_string = json.dumps(data)
+# print(json_string)
+
+ 
+  # ====================================================================================================
+
+# 131. Напишите программу на Python для разделения строки переменной длины на переменные.
+
+# var_list = ['a', 'b', 'c']
+# x, y, z = (var_list + [None] * 3)[:3]
+# print(x, y, z)
+# var_list = [100, 20.25]
+# x, y = (var_list + [None] * 2)[:2]
+# print(x, y)
+
+ 
+  # ====================================================================================================
+
+# 132. Напишите программу на Python для вывода домашнего каталога без абсолютного пути.
+
+# import os.path
+# print(os.path.expanduser('~'))
+
+ 
+  # ====================================================================================================
+
+# 133. Напишите программу на Python для расчета времени выполнения программы (разницы между началом и текущим временем).
+
+# from timeit import default_timer
+# def timer(n):
+#     start = default_timer()
+   
+#     for row in range(0, n):
+#         print(row)
+    
+#     print(default_timer() - start)
+
+# timer(5)
+# timer(15)
+
+ 
+  # ====================================================================================================
+
+# 134. Напишите программу на Python для ввода двух целых чисел в одну строку.
+
+# x, y = map(int, input().split())
+# print("The value of x & y are: ", x, y)
+
+ 
+  # ====================================================================================================
+
+
+# 135. Напишите программу на Python для печати переменной без пробелов между значениями.
+# Выборочное значение: x =30
+# Ожидаемый результат: значение x равно «30».
+
+# x = 30
+# formatted_string = 'Value of x is "{}"'.format(x)
+# print(formatted_string)
+
+ 
+  # ====================================================================================================
+
+# 136. Напишите программу на Python для поиска файлов и пропуска каталогов в заданном каталоге.
+
+# import os
+# print([f for f in os.listdir('/home/students') if os.path.isfile(os.path.join('/home/students', f))])
+
+ 
+  # ====================================================================================================
+
+# 137. Напишите программу на Python для извлечения одной пары ключ-значение из словаря в переменные.
+
+# d = {'Red': 'Green'}
+# (c1, c2), = d.items()
+# print(c1)
+# print(c2)
+
+ 
+  # ====================================================================================================
+
+# 138. Напишите программу на Python для преобразования true в 1 и false в 0.
+
+# x = 'true'
+
+# x = int(x == 'true')
+# print(x)
+
+# x = 'abcd'
+# x = int(x == 'true')
+# print(x)
+
+ 
+  # ====================================================================================================
+
+# 139. Напишите программу на Python для проверки IP-адреса.
+
+# import socket
+
+# addr = '127.0.0.2561'
+
+# try:
+#     socket.inet_aton(addr)
+#     print("Valid IP")
+
+# except socket.error:
+#     print("Invalid IP")
+
+ 
+  # ====================================================================================================
+
+# 140. Напишите программу на Python для преобразования целого числа в двоичное, сохраняющее ведущие нули.
+# Пример данных: x=12
+# Ожидаемый результат: 00001100.
+# 0000001100
+
+# x = 12
+# print(format(x, '08b'))
+# print(format(x, '010b'))
+
+ 
+  # ====================================================================================================
+
+# 141. Напишите программу на Python для преобразования десятичных чисел в шестнадцатеричные.
+# Пример десятичного числа: 30, 4.
+# Ожидаемый результат: 1e, 04
+
+# x = 30
+# print(format(x, '02x'))
+
+# x = 4
+# print(format(x, '02x'))
+ 
+  # ====================================================================================================
+
+# 142. Напишите программу на Python, проверяющую, за каждой последовательной последовательностью нулей следует последовательная последовательность единиц одинаковой длины в данной строке. Вернуть истину/ложь.
+# Исходная последовательность: 01010101.
+# Проверьте, за каждой последовательной последовательностью нулей следует последовательная последовательность единиц в указанной строке:
+# Истинный
+# Исходная последовательность: 00
+# Проверьте, за каждой последовательной последовательностью нулей следует последовательная последовательность единиц в указанной строке:
+# ЛОЖЬ
+# Исходная последовательность: 000111000111.
+# Проверьте, за каждой последовательной последовательностью нулей следует последовательная последовательность единиц в указанной строке:
+# Истинный
+# Исходная последовательность: 00011100011.
+# Проверьте, за каждой последовательной последовательностью нулей следует последовательная последовательность единиц в указанной строке:
+# ЛОЖЬ
+
+# def test(str1):
+#     while '01' in str1:
+#         str1 = str1.replace('01', '')
+    
+#     return len(str1) == 0
+
+# str1 = "01010101"
+
+# print("Original sequence:", str1)
+
+# print("Check if every consecutive sequence of zeroes is followed by a consecutive sequence of ones in the said string:")
+# print(test(str1))
+
+# str1 = "00"
+# print("\nOriginal sequence:", str1)
+# print("Check if every consecutive sequence of zeroes is followed by a consecutive sequence of ones in the said string:")
+# print(test(str1))
+# str1 = "000111000111"
+# print("\nOriginal sequence:", str1)
+# print("Check if every consecutive sequence of zeroes is followed by a consecutive sequence of ones in the said string:")
+# print(test(str1))
+# str1 = "00011100011"
+# print("\nOriginal sequence:", str1)
+# print("Check if every consecutive sequence of zeroes is followed by a consecutive sequence of ones in the said string:")
+# print(test(str1))
+ 
+  # ====================================================================================================
+
+# 143. Напишите программу на Python, чтобы определить, работает ли оболочка Python в 32-битном или 64-битном режиме операционной системы.
+
+# import struct
+# print(struct.calcsize("P") * 8)
+
+ 
+  # ====================================================================================================
+
+# 144. Напишите программу на Python, чтобы проверять, является ли переменная целым числом или строкой.
+
+# print(isinstance(25, int) or isinstance(25, str))
+# print(isinstance([25], int) or isinstance([25], str))
+# print(isinstance("25", int) or isinstance("25", str))
+
+# Функция isinstance() проверяет, является ли объект экземпляром указанного класса или его подкласса.
+
+  # ====================================================================================================
+
+# 145. Напишите программу на Python, чтобы проверить, является ли переменная списком, кортежем или набором.
+
+#x = ['a', 'b', 'c', 'd']
+#x = {'a', 'b', 'c', 'd'}
+# x = ('tuple', False, 3.2, 1)
+
+# if type(x) == list:
+#     print('x is a list')
+# elif type(x) == set:
+#     print('x is a set')
+# elif type(x) == tuple:
+#     print('x is a tuple')    
+# else:
+#     print('Neither a list nor a set nor a tuple.')
+
+ 
+  # ====================================================================================================
+
+# 146. Напишите программу на Python, чтобы найти расположение исходных кодов модулей Python.
+
+# import imp
+
+# print("Location of Python os module sources:")
+# print(imp.find_module('os'))
+# print("\nLocation of Python sys module sources:")
+# print(imp.find_module('datetime'))
+
+ 
+  # ====================================================================================================
+
+# 147. Напишите функцию Python, проверяющую, делится ли число на другое число. Примите от пользователя два целочисленных значения.
+
+# def multiple(m, n):
+#     return True if m is n == 0 else False
+
+# print(multiple(20, 5))  
+# print(multiple(7, 2))  
+
+ 
+  # ====================================================================================================
+
+# 148. Напишите функцию Python для поиска максимального и минимального чисел из последовательности чисел.
+# Примечание. Не используйте встроенные функции.
+
+# def max_min(data):
+#     l = data[0]
+#     s = data[0] 
+    
+#     for num in data:
+#         if num > l:
+#             l = num  
+#         elif num < s:
+#             s = num 
+    
+#     return l, s
+
+# print(max_min([0, 10, 15, 40, -5, 42, 17, 28, 75]))
+ 
+  # ====================================================================================================
+
+# 149. Напишите функцию Python, которая принимает положительное целое число и возвращает сумму куба всех положительных целых чисел, меньших указанного числа.
+
+# def sum_of_cubes(n):
+#     n -= 1
+#     total = 0
+    
+#     while n > 0:
+#         total += n * n * n
+#         n -= 1
+    
+#     return total
+
+# print("Sum of cubes smaller than the specified number: ", sum_of_cubes(3))
+
+ 
+  # ====================================================================================================
+
+# 150. Напишите функцию Python, чтобы проверять, присутствует ли в
+#  последовательности целочисленных значений отдельная пара чисел, 
+# произведение которых нечетно.
+
+# def odd_product(nums):
+#     for i in range(len(nums)):
+#         for j in range(len(nums)):
+#             if i != j:
+#                 product = nums[i] * nums[j]
+#                 if product & 1:
+#                     return True
+#     return False
+
+# dt1 = [2, 4, 6, 8]
+# dt2 = [1, 6, 4, 7, 8]
+# dt3 = [1, 3, 5, 7, 9]
+
+# print(dt1, odd_product(dt1))
+# print(dt2, odd_product(dt2))
+# print(dt3, odd_product(dt3))
+
+ 
+  # ====================================================================================================
+
 
 
