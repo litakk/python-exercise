@@ -139,10 +139,10 @@
 # print(r)
 
 
-def function(str):
-    MIDDLE = len(str) // 2
-    return str[0].upper() + str[1:MIDDLE] + str[MIDDLE+1:-1] + str[-1].upper()
-print(function("helko"))
+# def function(str):
+#     MIDDLE = len(str) // 2
+#     return str[0].upper() + str[1:MIDDLE] + str[MIDDLE+1:-1] + str[-1].upper()
+# print(function("helko"))
 
 # # Определить функцию с именем function с параметром str
 # функция защиты (str):
@@ -187,3 +187,95 @@ print(function("helko"))
 # Таким образом, результатом этой манипуляции является новая строка, 
 # в которой первый и последний символы написаны с заглавной буквы,
 #  а средняя часть удалена.
+
+
+# "" '' '''  '''
+
+
+
+# import collections
+# num = [2, 2, 4, 6, 6, 8, 6, 10, 4]
+# result = sum(collections.Counter(num).values())
+# print(result)
+
+# - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  
+
+# Проверьте перед тем как вызвать функцию еще раз 
+
+# def count_down(number:int) -> None:
+#     """Будет выводить числа от number до 0"""
+#     print(number)
+
+#     if number > 0:
+#         return count_down(number - 1)
+# count_down(10)
+
+# - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  
+
+# def count_up(max_number:int, counter:int=1) -> None:
+#     """Будет вводить числа от 1 до max_number"""
+#     print("⭐" * counter)
+
+#     if counter < max_number:
+#         return count_up(max_number, counter+1)
+    
+# count_up(10)
+
+# - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  
+
+# def count_up(max_number:int, counter:int=1) -> None:
+#     """Будет вводить числа от 1 до max_number"""
+#     print(counter)
+
+#     if counter < max_number:
+#         return count_up(max_number, counter+1)
+
+# count_up(10)
+
+# - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  
+
+# Factorial - 5 - 5*4*3*2*1 = 120
+
+
+# def factorial(number:int) -> int:
+#     if number == 1:
+#         return 1
+    
+#     return number * factorial(number - 1)
+# print(factorial(5))
+
+# - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  
+
+# def fib(max:int) -> list[int]:
+#  a, b = 0, 1
+# while a < 100:
+#     print(a, end=', ')
+#     a, b = b, a + b
+
+# - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  
+
+# 1 in [1,2,3]
+
+# def elements():
+#     list = [1,2,3,4,5]
+#     new_list = []
+
+#     for i in list:
+#         if i not in new_list:
+#             new_list.append(i)
+#     return new_list
+
+# r = elements()
+# print("Результат всего задания Алишер Ака))) :" + str(r))
+
+# def te():
+#     i = input("Введите сообщение: ")
+
+
+
+# def count_vowels(string):
+#     qqq = 'aeiou'
+#     return "".join([i for i in string if i not in qqq])
+# v = count_vowels("q w e r t y u i o p")
+# print(v)
+
